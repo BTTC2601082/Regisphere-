@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RegiSphere | Event Registration</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="hero">
+    <nav class="navbar">
+      <a class="brand" href="#"><span>Regi</span>Sphere</a>
+      <a class="nav-link" href="#events">Events</a>
+      <a class="nav-link" href="#register">Register</a>
+    </nav>
+    <div class="hero-content">
+      <p class="eyebrow">PLAN • PARTICIPATE • CONNECT</p>
+      <h1>Find your next<br><span>great experience.</span></h1>
+      <p>Discover exciting events, meet new people, and reserve your place in just a few clicks.</p>
+      <a class="primary-btn" href="#events">Explore Events</a>
+    </div>
+    <div class="hero-shape shape-one"></div><div class="hero-shape shape-two"></div>
+  </header>
+
+  <main>
+    <section class="section" id="events">
+      <div class="section-heading">
+        <div><p class="eyebrow">WHAT'S HAPPENING</p><h2>Upcoming events</h2></div>
+        <p class="muted">Choose an event and register below.</p>
+      </div>
+      <div class="event-grid" id="eventList"></div>
+    </section>
+
+    <section class="register-section" id="register">
+      <div class="register-intro">
+        <p class="eyebrow">SAVE YOUR SPOT</p>
+        <h2>Event registration</h2>
+        <p>Fill in your details to reserve your place. You will see a confirmation after submitting the form.</p>
+        <div class="mini-note"><span>✓</span> Simple and quick registration</div>
+        <div class="mini-note"><span>✓</span> Your registration is saved in this browser</div>
+      </div>
+      <form id="registrationForm" class="form-card">
+        <div class="form-title"><h3>Participant details</h3><span>* Required fields</span></div>
+        <label for="fullName">Full name *</label>
+        <input id="fullName" name="fullName" type="text" placeholder="Enter your full name" required minlength="2">
+        <label for="email">Email address *</label>
+        <input id="email" name="email" type="email" placeholder="name@example.com" required>
+        <label for="phone">Phone number *</label>
+        <input id="phone" name="phone" type="tel" placeholder="10-digit phone number" pattern="[0-9]{10}" required>
+        <label for="event">Select event *</label>
+        <select id="event" name="event" required>
+          <option value="">Choose an event</option>
+        </select>
+        <label for="message">Message (optional)</label>
+        <textarea id="message" name="message" rows="3" placeholder="Any note for the organizers?"></textarea>
+        <button class="primary-btn submit-btn" type="submit">Complete Registration</button>
+        <p class="form-footnote">Demo project: information stays in your browser and is not sent to a server.</p>
+        <div id="confirmation" class="confirmation" role="status" aria-live="polite"></div>
+      </form>
+    </section>
+
+    <section class="section registrations-section">
+      <div class="section-heading">
+        <div><p class="eyebrow">PROJECT DEMO</p><h2>Recent registrations</h2></div>
+        <button id="clearRegistrations" class="text-btn" type="button">Clear demo data</button>
+      </div>
+      <div id="registrationList" class="registration-list"><p class="muted">No registrations yet.</p></div>
+    </section>
+  </main>
+
+  <footer><a class="brand" href="#"><span>Regi</span>Sphere</a><p>Event Registration Website • JavaScript Microproject</p></footer>
+  <script src="script.js"></script>
+</body>
+</html>
